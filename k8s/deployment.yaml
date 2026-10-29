@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: calculator
-        image: DOCKERHUB_USERNAME_PLACEHOLDER/calculator:IMAGE_TAG_PLACEHOLDER
+        image: dimpulratakonda/calculator:99dfa604ef05a80c900f3dd04464ed43bc6af7ec
         ports:
         - containerPort: 5000
         imagePullPolicy: Always

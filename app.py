@@ -15,6 +15,8 @@ HTML_TEMPLATE = """
         <select name="operation">
             <option value="add">+</option>
             <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
         </select>
         <input type="number" step="any" name="num2" required>
         <button type="submit">Calculate</button>
@@ -37,6 +39,13 @@ def calculate():
             result = num1 + num2
         elif operation == "subtract":
             result = num1 - num2
+        elif operation == "multiply":
+            result = num1 * num2
+        elif operation == "divide":
+            if num2 != 0:
+                result = num1 / num2
+            else:
+                result = "Error: Division by Zero"
     return render_template_string(HTML_TEMPLATE, result=result)
 
 if __name__ == "__main__":
